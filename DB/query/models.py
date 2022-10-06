@@ -45,19 +45,6 @@ class Calendar(Base):
     user = relationship('User')
 
 
-class Helper(Base):
-    __tablename__ = 'helper'
-
-    id = Column(Integer, primary_key=True)
-    startdDay = Column(CHAR(16), nullable=False)
-    endDay = Column(CHAR(16), nullable=False)
-    pay = Column(Integer, nullable=False)
-    record = Column(String(1000), nullable=False)
-    user_id = Column(ForeignKey('user.id'), nullable=False, index=True)
-
-    user = relationship('User')
-
-
 class Interlock(Base):
     __tablename__ = 'interlock'
 
@@ -66,4 +53,16 @@ class Interlock(Base):
     seriaNamber = Column(ForeignKey('ai.seriaNamber'), nullable=False, index=True)
 
     ai = relationship('Ai')
+    user = relationship('User')
+
+
+class Senior(Base):
+    __tablename__ = 'senior'
+
+    id = Column(Integer, primary_key=True)
+    period = Column(CHAR(16), nullable=False)
+    pay = Column(Integer, nullable=False)
+    record = Column(String(1000), nullable=False)
+    user_id = Column(ForeignKey('user.id'), nullable=False, index=True)
+
     user = relationship('User')
