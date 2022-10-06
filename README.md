@@ -1,5 +1,5 @@
 # neonadeul-i_AI-Speaker
-Use RPI, Python, Google Assiant API
+Use RPI, Python, Google Assiant API, sqlalchemy
 
 ## 커밋 규칙
 - Create [파일명]: 새로운 파일을 생성했을 때
