@@ -130,7 +130,7 @@ dmypy.json
 
 # mp3 ignore
 *.mp3
-sample.txt
+*.txt
 
 # config file
 config.py
